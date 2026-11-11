@@ -1,0 +1,8 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "author": "",
+  "description": { "": "Dump every design's parametric timeline (parameters, sketches, constraints, features) to JSON for rebuilding in another CAD tool." },
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}

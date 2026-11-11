@@ -1,0 +1,24 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [master]
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # The golden suite (golden/run_golden.py) needs solidcraft-cli, which this job does not
+      # build; run it locally. The Fusion scripts import `adsk`, which exists only inside Fusion,
+      # so they are byte-compiled here, not imported.
+      - run: python -m compileall -q .
+      - name: CLI entry points load
+        run: |
+          for f in migrate.py build_library.py timeline_to_solidcraft.py f3d_inventory.py; do
+            python "$f" --help > /dev/null
+          done

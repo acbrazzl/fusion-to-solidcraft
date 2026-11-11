@@ -1,0 +1,56 @@
+# Design data must never enter this repo. See README.md ("Design data stays out").
+
+# CAD geometry and archives
+*.f3d
+*.f3z
+*.step
+*.stp
+*.iges
+*.igs
+*.stl
+*.3mf
+*.obj
+*.sat
+*.sab
+*.x_t
+*.x_b
+*.smt
+*.dxf
+*.dwg
+*.sldprt
+*.sldasm
+*.3dm
+*.gcode
+*.solidcraft
+*.smb
+
+# Pipeline output: extracted timelines, translated scripts, manifests, reports,
+# coverage files, inventories. All of it is JSON/HTML/CSV derived from real designs.
+*.json
+*.html
+*.csv
+
+# Renders and previews
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.mp4
+
+# Output folders
+out/
+export/
+fusion-export/
+fusion-timeline/
+fusion-import/
+inventory/
+previews/
+
+__pycache__/
+*.pyc
+
+# Golden-run leftovers (invented shapes, regenerated every run)
+*.bak
+golden/_bump*

@@ -1,0 +1,8 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "author": "",
+  "description": { "": "Batch-export every Fusion design to STEP + F3D with a manifest, for migration to another CAD tool." },
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}
